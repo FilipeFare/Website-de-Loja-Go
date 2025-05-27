@@ -35,23 +35,19 @@ Banco de Dados Web
 
 Siga os passos abaixo para rodar a aplicação localmente:
 
-1. Clone o repositório:  
-   `git clone https://github.com/seu-usuario/banco-de-dados-web.git`  
-   `cd banco-de-dados-web`
-
-2. Configure o banco de dados PostgreSQL:  
+1. Configure o banco de dados PostgreSQL:  
    Crie um banco de dados no PostgreSQL (ex: produtosdb).  
    Crie a tabela necessária usando o seguinte SQL:  
    `CREATE TABLE produtos ( id SERIAL PRIMARY KEY, nome TEXT, descricao TEXT, preco NUMERIC, quantidade INT );`
 
-3. Atualize a conexão com o banco de dados:  
+2. Atualize a conexão com o banco de dados:  
    No arquivo `bancodedados/db.go`, atualize os dados de conexão conforme sua configuração:  
    `const stringDeConexao = "user=SEU_USUARIO dbname=produtosdb password=SUA_SENHA host=localhost sslmode=disable"`
 
-4. Execute a aplicação:  
+3. Execute a aplicação:  
    `go run main.go`
 
-5. Acesse no navegador:  
+4. Acesse no navegador:  
    `http://localhost:7000`
 
 ---
